@@ -21,11 +21,13 @@ public class Persona {
     private String email;
     private String sobre_mi;
     private String url_foto;
+    private String password;
 
     public Persona() {
+        
     }
 
-    public Persona(Integer id_per, String nombre, String apellido, String fechaNac, String ubicacion, String email, String sobre_mi, String url_foto) {
+    public Persona(Integer id_per, String nombre, String apellido, String password, String fechaNac, String ubicacion, String email, String sobre_mi, String url_foto) {
         this.id_per = id_per;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -33,6 +35,7 @@ public class Persona {
         this.ubicacion = ubicacion;
         this.email = email;
         this.sobre_mi = sobre_mi;
+        this.password = password;
         this.url_foto = url_foto;
     }
 
