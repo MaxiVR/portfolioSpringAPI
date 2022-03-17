@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -24,8 +23,8 @@ public class ProyectoController {
     private IProyectoService proyectoService;
     
     @PostMapping ("/persona/proyecto/new")
-    public void crearProyecto (@RequestBody Proyecto pro){
-        proyectoService.crearProyecto(pro);
+    public Proyecto crearProyecto (@RequestBody Proyecto pro){
+       return proyectoService.crearProyecto(pro);
     }
 
     @GetMapping ("/persona/proyecto/ver/todo")

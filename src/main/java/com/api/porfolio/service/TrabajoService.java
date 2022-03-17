@@ -18,8 +18,9 @@ public class TrabajoService implements ITrabajoService{
     }
 
     @Override
-    public void crearTrabajo (Trabajo trabajo){
+    public Trabajo crearTrabajo (Trabajo trabajo){
         trabajoRepo.save(trabajo);
+        return trabajo;
     }
 
     @Override

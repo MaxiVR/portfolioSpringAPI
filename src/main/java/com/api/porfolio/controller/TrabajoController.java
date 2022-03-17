@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,8 +24,8 @@ public class TrabajoController {
     private ITrabajoService trabajoService;
 
     @PostMapping ("/persona/trabajo/new")
-    public void crearTrabajo (@RequestBody Trabajo edu){
-        trabajoService.crearTrabajo(edu);
+    public Trabajo crearTrabajo (@RequestBody Trabajo trabajo){
+       return  trabajoService.crearTrabajo(trabajo);
     }
 
     @GetMapping ("/persona/trabajo/ver/todo")

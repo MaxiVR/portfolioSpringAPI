@@ -7,7 +7,7 @@ import java.util.List;
 public interface IEducacionService {
 
     public List <Educacion> verListaEducacion ();
-    public void crearEducacion (Educacion edu);
+    public Educacion crearEducacion (Educacion edu);
     public void borrarEducacion (Integer id);
     public Educacion buscarEducacion (Integer id);
     public Educacion modificarEducacion (Educacion eduAux, Educacion eduMod);
