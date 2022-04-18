@@ -12,7 +12,7 @@ import lombok.Setter;
 public class Persona {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id_per;
     private String nombre;
     private String apellido;
@@ -21,7 +21,6 @@ public class Persona {
     private String email;
     private String sobre_mi;
     private String url_foto;
-    private String password;
 
     public Persona() {
         
@@ -35,7 +34,6 @@ public class Persona {
         this.ubicacion = ubicacion;
         this.email = email;
         this.sobre_mi = sobre_mi;
-        this.password = password;
         this.url_foto = url_foto;
     }
 

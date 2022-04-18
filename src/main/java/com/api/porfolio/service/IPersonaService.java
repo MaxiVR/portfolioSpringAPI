@@ -8,7 +8,7 @@ public interface IPersonaService {
  
         
     public List<Persona> verPersonas();
-    public void crearPersona (Persona per);
+    public Persona crearPersona (Persona per);
     public void borrarPersona (Integer  id);
     public Persona buscarPersona (Integer  id);
     public Persona modificarPersona (Persona perAux, Persona perMod);
