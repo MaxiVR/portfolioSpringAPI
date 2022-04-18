@@ -26,7 +26,7 @@ public class Persona {
         
     }
 
-    public Persona(Integer id_per, String nombre, String apellido, String password, String fechaNac, String ubicacion, String email, String sobre_mi, String url_foto) {
+    public Persona(Integer id_per, String nombre, String apellido, String fechaNac, String ubicacion, String email, String sobre_mi, String url_foto) {
         this.id_per = id_per;
         this.nombre = nombre;
         this.apellido = apellido;
