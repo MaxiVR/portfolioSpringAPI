@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 
 public class UsuarioPrincipal implements UserDetails {
-    private String nombreUsuario;
+
     private String email;
     private String password;
     private Collection<? extends GrantedAuthority> authorities;
