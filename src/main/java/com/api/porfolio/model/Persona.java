@@ -1,14 +1,13 @@
 package com.api.porfolio.model;
 
-import com.api.porfolio.security.entity.Usuario;
+import java.util.List;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,7 +25,18 @@ public class Persona {
     private String email;
     private String sobre_mi;
     private String url_foto;
- 
+    @OneToMany
+    @JoinColumn(name = "id_persona")
+    private List<Educacion> educacion;
+    @OneToMany
+    @JoinColumn(name = "id_persona")
+    private List<Trabajo> trabajo;
+    @OneToMany
+    @JoinColumn(name = "id_persona")
+    private List<Proyecto> proyecto;
+    @OneToMany
+    @JoinColumn(name = "id_persona")
+    private List<HardSkill> hardskill;
 
     public Persona() {
         

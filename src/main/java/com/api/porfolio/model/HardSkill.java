@@ -17,4 +17,5 @@ public class HardSkill {
     private String lenguaje;
     private Integer porcentaje;
     private String urlImagen;
+    private Integer id_persona;
 }

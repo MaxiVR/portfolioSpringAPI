@@ -27,7 +27,5 @@ public class Proyecto {
         this.descripcionProyecto = descripcionProyecto;
         this.id_persona = id_persona;
     }
-
-     
-    
+   
 }

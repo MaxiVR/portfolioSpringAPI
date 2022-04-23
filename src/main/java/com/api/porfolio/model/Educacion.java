@@ -29,8 +29,6 @@ public class Educacion {
         this.fechaFin = fechaFin;
         this.id_persona = id_persona;
     }
-
    
-    
     
 }
