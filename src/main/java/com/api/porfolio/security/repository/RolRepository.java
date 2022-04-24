@@ -1,4 +1,4 @@
-package com.api.porfolio.security.repository;
+/**package com.api.porfolio.security.repository;
 
 import com.api.porfolio.security.entity.Rol;
 import com.api.porfolio.security.enums.RolNombre;
@@ -10,4 +10,4 @@ import java.util.Optional;
 @Repository
 public interface RolRepository extends JpaRepository<Rol, Integer> {
     Optional<Rol> findByRolNombre(RolNombre rolNombre);
-}
+}**/

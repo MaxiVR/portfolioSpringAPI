@@ -11,15 +11,16 @@ import lombok.Setter;
 public class NuevoUsuario {
     @NotBlank
     private String nombre;
-    //@NotBlank
-    //private String nombreUsuario;
+    @NotBlank
+    private String nombreUsuario;
     @Email
     private String email;
     @NotBlank
     private String password;
-    //private Set<String> roles = new HashSet<>();
+    /**
+    private Set<String> roles = new HashSet<>();**/
 
-    /**public String getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
@@ -50,7 +51,7 @@ public class NuevoUsuario {
     public void setPassword(String password) {
         this.password = password;
     }
-
+/**
     public Set<String> getRoles() {
         return roles;
     }

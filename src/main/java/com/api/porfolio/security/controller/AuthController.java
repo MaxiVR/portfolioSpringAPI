@@ -4,11 +4,11 @@ import com.api.porfolio.security.dto.Mensaje;
 import com.api.porfolio.security.dto.JwtDto;
 import com.api.porfolio.security.dto.LoginUsuario;
 import com.api.porfolio.security.dto.NuevoUsuario;
-import com.api.porfolio.security.entity.Rol;
+//import com.api.porfolio.security.entity.Rol;
 import com.api.porfolio.security.entity.Usuario;
 import com.api.porfolio.security.enums.RolNombre;
 import com.api.porfolio.security.jwt.JwtProvider;
-import com.api.porfolio.security.service.RolService;
+//import com.api.porfolio.security.service.RolService;
 import com.api.porfolio.security.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -39,9 +39,9 @@ public class AuthController {
 
     @Autowired
     UsuarioService usuarioService;
-
+    /*
     @Autowired
-    RolService rolService;
+    RolService rolService;*/
 
     @Autowired
     JwtProvider jwtProvider;
@@ -73,8 +73,8 @@ public class AuthController {
                 authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginUsuario.getEmail(), loginUsuario.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtProvider.generateToken(authentication);
-        UserDetails userDetails = (UserDetails)authentication.getPrincipal();
-        JwtDto jwtDto = new JwtDto(jwt, userDetails.getUsername());//, userDetails.getAuthorities()
+        //UserDetails userDetails = (UserDetails)authentication.getPrincipal();
+        JwtDto jwtDto = new JwtDto(jwt, loginUsuario.getEmail());//, userDetails.getAuthorities(
 
         return new ResponseEntity(jwtDto, HttpStatus.OK);
     }

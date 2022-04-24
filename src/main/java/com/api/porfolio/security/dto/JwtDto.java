@@ -14,14 +14,14 @@ public class JwtDto {
 
     //private Collection<? extends GrantedAuthority> authorities;
 
-    public JwtDto(String token, String email){  //Collection<? extends GrantedAuthority> authorities) {
+    public JwtDto(String token, String email) {//,  Collection<? extends GrantedAuthority> authorities
         this.token = token;
         this.email = email;
 
         //this.authorities = authorities;
     }
-
-    /**public Collection<? extends GrantedAuthority> getAuthorities() {
+    /**
+    public Collection<? extends GrantedAuthority> getAuthorities() {
         return authorities;
     }
 

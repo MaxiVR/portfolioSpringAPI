@@ -1,4 +1,4 @@
-package com.api.porfolio.security.service;
+/**package com.api.porfolio.security.service;
 
 import com.api.porfolio.security.entity.Rol;
 import com.api.porfolio.security.enums.RolNombre;
@@ -23,4 +23,4 @@ public class RolService {
     public void save(Rol rol){
         rolRepository.save(rol);
     }
-}
+}**/

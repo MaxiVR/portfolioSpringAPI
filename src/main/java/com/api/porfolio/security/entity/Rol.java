@@ -1,4 +1,4 @@
-package com.api.porfolio.security.entity;
+/**package com.api.porfolio.security.entity;
 
 import com.api.porfolio.security.enums.RolNombre;
 
@@ -25,3 +25,4 @@ public class Rol {
     }
 
 }
+**/
