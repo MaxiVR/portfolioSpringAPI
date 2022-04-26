@@ -48,11 +48,11 @@ public class EducacionController {
 
 
     @PatchMapping ("persona/educacion/modificar/{id}")
-    public void modificarEducacion (@PathVariable Integer id, @RequestBody Educacion eduMod){
+    public Educacion modificarEducacion (@PathVariable Integer id, @RequestBody Educacion eduMod){
         Educacion eduAux = eduService.buscarEducacion(id);
     
         eduMod = eduService.modificarEducacion(eduAux, eduMod);
 
-        eduService.crearEducacion(eduMod);
+        return eduService.crearEducacion(eduMod);
     }
 }

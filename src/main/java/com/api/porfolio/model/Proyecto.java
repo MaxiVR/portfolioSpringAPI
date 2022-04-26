@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,7 +18,9 @@ public class Proyecto {
     private Integer id_proyecto;
     private String nombreProyecto;
     private String descripcionProyecto;
-    private Integer id_persona;
+    @ManyToOne
+    @JoinColumn (name = "id_persona")
+    private Persona persona;
 
     public Proyecto() {
     }
@@ -25,7 +29,6 @@ public class Proyecto {
         this.id_proyecto = id_proyecto;
         this.nombreProyecto = nombreProyecto;
         this.descripcionProyecto = descripcionProyecto;
-        this.id_persona = id_persona;
     }
    
 }

@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,5 +19,19 @@ public class HardSkill {
     private String lenguaje;
     private Integer porcentaje;
     private String urlImagen;
-    private Integer id_persona;
+    @ManyToOne
+    @JoinColumn (name = "id_persona")
+    private Persona persona;
+
+    public HardSkill() {
+    }
+
+    public HardSkill(Integer id_hardSkill, String lenguaje, Integer porcentaje, String urlImagen) {
+        this.id_hardSkill = id_hardSkill;
+        this.lenguaje = lenguaje;
+        this.porcentaje = porcentaje;
+        this.urlImagen = urlImagen;
+    }
+    
+    
 }

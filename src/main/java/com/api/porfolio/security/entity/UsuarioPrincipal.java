@@ -1,42 +1,31 @@
 package com.api.porfolio.security.entity;
 
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.List;
-import java.util.stream.Collectors;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter @Setter
 public class UsuarioPrincipal implements UserDetails {
 
     private String email;
     private String password;
-    //private Collection<? extends GrantedAuthority> authorities;
 
-    public UsuarioPrincipal( String email, String password){ //, Collection<? extends GrantedAuthority> authorities{
+    public UsuarioPrincipal( String email, String password){
         this.email = email;
         this.password = password;
-        //this.authorities = authorities;
     }
 
     public static UsuarioPrincipal build(Usuario usuario){
-        /**List<GrantedAuthority> authorities =
-                usuario.getRoles().stream().map(rol -> new SimpleGrantedAuthority(rol
-                .getRolNombre().name())).collect(Collectors.toList());**/
-        return new UsuarioPrincipal( usuario.getEmail(), usuario.getPassword());//, authorities
+        return new UsuarioPrincipal( usuario.getEmail(), usuario.getPassword());
     }
     
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
          return new HashSet<GrantedAuthority>();
-        //return authorities;
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
     }
 
     @Override
@@ -62,11 +51,5 @@ public class UsuarioPrincipal implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    
+    }    
 }

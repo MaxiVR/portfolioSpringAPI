@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,19 +21,20 @@ public class Trabajo {
     private String descripcionTrabajo;
     private String fechaInicio;
     private String fechaFin;
-    private Integer id_persona;
+    @ManyToOne
+    @JoinColumn (name = "id_persona")
+    private Persona persona;
 
     public Trabajo() {
     }
 
-    public Trabajo(Integer id_trabajo, String empresa, String puesto, String descripcionTrabajo, String fechaInicio, String fechaFin, Integer id_persona) {
+    public Trabajo(Integer id_trabajo, String empresa, String puesto, String descripcionTrabajo, String fechaInicio, String fechaFin) {
         this.id_trabajo = id_trabajo;
         this.empresa = empresa;
         this.puesto = puesto;
         this.descripcionTrabajo = descripcionTrabajo;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
-        this.id_persona = id_persona;
     }
 
   

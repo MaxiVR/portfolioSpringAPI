@@ -1,18 +1,22 @@
 package com.api.porfolio.model;
 
+import com.api.porfolio.security.entity.Usuario;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
 @Entity
+@Table(name = "persona")
 public class Persona {
 
     @Id
@@ -25,19 +29,18 @@ public class Persona {
     private String email;
     private String sobre_mi;
     private String url_foto;
-    @OneToMany
-    @JoinColumn(name = "id_persona")
-    private List<Educacion> educacion;
-    @OneToMany
-    @JoinColumn(name = "id_persona")
-    private List<Trabajo> trabajo;
-    @OneToMany
-    @JoinColumn(name = "id_persona")
-    private List<Proyecto> proyecto;
-    @OneToMany
-    @JoinColumn(name = "id_persona")
-    private List<HardSkill> hardskill;
-
+    @OneToMany (mappedBy = "persona")
+    private List<Educacion> educacion = new ArrayList<>();
+    @OneToMany (mappedBy = "persona")
+    private List<Trabajo> trabajo = new ArrayList<>();
+    @OneToMany (mappedBy = "persona")
+    private List<Proyecto> proyecto = new ArrayList<>();
+    @OneToMany (mappedBy = "persona")
+    private List<HardSkill> hardskill = new ArrayList<>();
+    @OneToOne (mappedBy = "persona")
+    private Usuario usuario;
+    
+    
     public Persona() {
         
     }
