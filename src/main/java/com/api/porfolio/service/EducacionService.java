@@ -12,6 +12,11 @@ public class EducacionService implements IEducacionService{
     @Autowired
     private EducacionRepository eduRepo;
     
+    
+    public void setIdPer (Integer id){
+        eduRepo.setIdPer(id);
+    }
+            
     @Override
     public List <Educacion> verListaEducacion (){
         return eduRepo.findAll();

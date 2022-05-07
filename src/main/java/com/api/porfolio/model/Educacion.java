@@ -1,5 +1,6 @@
 package com.api.porfolio.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,20 +20,23 @@ public class Educacion {
     private String nombreInstitucion;
     private String fechaInicio;
     private String fechaFin;
+    @JsonBackReference
     @ManyToOne
     @JoinColumn (name = "id_persona")
     private Persona persona;
 
-    public Educacion() {
-    }
+   
 
     public Educacion(Integer id_edu, String nombreInstitucion, String fechaInicio, String fechaFin) {
         this.id_edu = id_edu;
         this.nombreInstitucion = nombreInstitucion;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
-      
     }
-   
+    
+    
+
+    public Educacion() {
+    }
     
 }

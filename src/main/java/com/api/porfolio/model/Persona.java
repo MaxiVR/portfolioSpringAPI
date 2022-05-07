@@ -1,6 +1,7 @@
 package com.api.porfolio.model;
 
 import com.api.porfolio.security.entity.Usuario;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
@@ -20,7 +21,7 @@ import lombok.Setter;
 public class Persona {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_persona;
     private String nombre;
     private String apellido;
@@ -29,14 +30,15 @@ public class Persona {
     private String email;
     private String sobre_mi;
     private String url_foto;
+    @JsonManagedReference
     @OneToMany (mappedBy = "persona")
-    private List<Educacion> educacion = new ArrayList<>();
+    private List<Educacion> educacion;
     @OneToMany (mappedBy = "persona")
-    private List<Trabajo> trabajo = new ArrayList<>();
+    private List<Trabajo> trabajo;
     @OneToMany (mappedBy = "persona")
-    private List<Proyecto> proyecto = new ArrayList<>();
+    private List<Proyecto> proyecto;
     @OneToMany (mappedBy = "persona")
-    private List<HardSkill> hardskill = new ArrayList<>();
+    private List<HardSkill> hardskill;
     @OneToOne (mappedBy = "persona")
     private Usuario usuario;
     

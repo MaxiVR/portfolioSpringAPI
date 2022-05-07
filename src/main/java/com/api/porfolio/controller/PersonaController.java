@@ -46,11 +46,11 @@ public class PersonaController {
     }    
 
     @PatchMapping ("persona/modificar/{id}")
-    public void modificarPersona (@PathVariable Integer id, @RequestBody Persona perMod){
+    public Persona modificarPersona (@PathVariable Integer id, @RequestBody Persona perMod){
         Persona perAux = persoServ.buscarPersona(id);
     
         perMod = persoServ.modificarPersona(perAux, perMod);
 
-        persoServ.crearPersona(perMod);
+        return persoServ.crearPersona(perMod);
     }
 }

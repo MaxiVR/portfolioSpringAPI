@@ -8,12 +8,15 @@ public class JwtDto {
     private String token;
     private String bearer = "Bearer";
     private String email;
+    private int id;
 
+    public JwtDto() {
+    }
 
-
-    public JwtDto(String token, String email) {
+    public JwtDto(String token, String email, int id) {
         this.token = token;
         this.email = email;
-
+        this.id = id;
     }
+
 }

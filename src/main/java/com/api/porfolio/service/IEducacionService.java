@@ -11,6 +11,8 @@ public interface IEducacionService {
     public void borrarEducacion (Integer id);
     public Educacion buscarEducacion (Integer id);
     public Educacion modificarEducacion (Educacion eduAux, Educacion eduMod);
+
+    public void setIdPer(Integer id);
     
     
 }
