@@ -50,11 +50,10 @@ public class AuthController {
             return new ResponseEntity(new Mensaje("ese email ya existe"), HttpStatus.BAD_REQUEST);
         Usuario usuario = new Usuario(nuevoUsuario.getEmail(), passwordEncoder.encode(nuevoUsuario.getPassword()));
         Persona per = new Persona ();
-        
         usuarioService.save(usuario);
+        usuarioService.setIdPerRelacion(usuario.getId());
         per.setId_persona(usuario.getId());
         System.out.println(usuario.getId());
-        //per.setId_persona(usuario.getId());
         System.out.println(per.getId_persona());
         persoServ.crearPersona(per);
         System.out.println(per.getId_persona());
