@@ -26,7 +26,7 @@ public class EducacionController {
     @PostMapping ("/persona/educacion/new")
     public Educacion crearEducacion (@RequestBody Educacion edu){
         Educacion eduAux = eduService.crearEducacion(edu);
-        eduService.setIdPer(eduAux.getId_edu());
+        eduService.setIdPerRelacion(eduAux.getId_edu());
         return eduAux;
     }
 

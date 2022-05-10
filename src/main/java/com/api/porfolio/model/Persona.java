@@ -2,7 +2,6 @@ package com.api.porfolio.model;
 
 import com.api.porfolio.security.entity.Usuario;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,12 +32,18 @@ public class Persona {
     @JsonManagedReference
     @OneToMany (mappedBy = "persona")
     private List<Educacion> educacion;
+    @JsonManagedReference
     @OneToMany (mappedBy = "persona")
     private List<Trabajo> trabajo;
+    @JsonManagedReference
     @OneToMany (mappedBy = "persona")
     private List<Proyecto> proyecto;
+    @JsonManagedReference
     @OneToMany (mappedBy = "persona")
     private List<HardSkill> hardskill;
+    @JsonManagedReference
+    @OneToMany (mappedBy = "persona")
+    private List<SoftSkill> softskill;
     @OneToOne (mappedBy = "persona")
     private Usuario usuario;
     

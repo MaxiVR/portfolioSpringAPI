@@ -1,6 +1,5 @@
 package com.api.porfolio.controller;
 
-import com.api.porfolio.model.Educacion;
 import com.api.porfolio.model.HardSkill;
 import com.api.porfolio.service.IHardSkillService;
 import java.util.List;
@@ -30,7 +29,9 @@ public class HardSkillController {
     
     @PostMapping ("/persona/hardskill/new")
     public HardSkill crearSkill (@RequestBody HardSkill skill){
-        return hardSkillService.crearSkill(skill);
+        HardSkill skillAux = hardSkillService.crearSkill(skill);
+        hardSkillService.setIdPerRelacion(skillAux.getId_hardSkill());
+        return skillAux;
     }
 
     @DeleteMapping ("/persona/hardskill/delete/{id}")

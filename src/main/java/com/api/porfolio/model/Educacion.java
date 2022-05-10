@@ -25,7 +25,9 @@ public class Educacion {
     @JoinColumn (name = "id_persona")
     private Persona persona;
 
-   
+    public Educacion() {
+    }
+    
 
     public Educacion(Integer id_edu, String nombreInstitucion, String fechaInicio, String fechaFin) {
         this.id_edu = id_edu;
@@ -36,7 +38,5 @@ public class Educacion {
     
     
 
-    public Educacion() {
-    }
     
 }

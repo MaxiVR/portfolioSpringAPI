@@ -1,5 +1,6 @@
 package com.api.porfolio.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,6 +22,7 @@ public class Trabajo {
     private String descripcionTrabajo;
     private String fechaInicio;
     private String fechaFin;
+    @JsonBackReference
     @ManyToOne
     @JoinColumn (name = "id_persona")
     private Persona persona;

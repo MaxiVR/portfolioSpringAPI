@@ -10,5 +10,5 @@ public interface IHardSkillService {
     public void borrarSkill (Integer id);
     public HardSkill buscarSkill (Integer id);
     public HardSkill modificarSkill (HardSkill skillAux, HardSkill skillMod);
-    
+    public void setIdPerRelacion(Integer id);
 }

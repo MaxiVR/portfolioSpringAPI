@@ -24,7 +24,9 @@ public class ProyectoController {
     
     @PostMapping ("/persona/proyecto/new")
     public Proyecto crearProyecto (@RequestBody Proyecto pro){
-       return proyectoService.crearProyecto(pro);
+       Proyecto proAux = proyectoService.crearProyecto(pro);
+       proyectoService.setIdPerRelacion(proAux.getId_proyecto());
+       return proAux;
     }
 
     @GetMapping ("/persona/proyecto/ver/todo")

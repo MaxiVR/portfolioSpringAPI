@@ -13,8 +13,8 @@ public class EducacionService implements IEducacionService{
     private EducacionRepository eduRepo;
     
     
-    public void setIdPer (Integer id){
-        eduRepo.setIdPer(id);
+    public void setIdPerRelacion (Integer id){
+        eduRepo.setIdPerRelacion(id);
     }
             
     @Override

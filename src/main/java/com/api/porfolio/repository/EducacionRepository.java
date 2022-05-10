@@ -13,5 +13,5 @@ public interface EducacionRepository extends JpaRepository<Educacion, Integer>{
     @Transactional
     @Modifying
     @Query(value = "UPDATE Educacion SET id_persona = 1 WHERE id_edu = :id_edu")
-    public void setIdPer (Integer id_edu);
+    public void setIdPerRelacion (Integer id_edu);
 }

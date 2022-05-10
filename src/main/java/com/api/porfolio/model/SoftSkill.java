@@ -10,27 +10,29 @@ import javax.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
 @Entity
-public class Proyecto {
-
+@Getter @Setter
+public class SoftSkill {
+    
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Integer id_proyecto;
-    private String nombreProyecto;
-    private String descripcionProyecto;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id_softSkill;
+    private String skill;
+    private String urlImagen;
     @JsonBackReference
     @ManyToOne
     @JoinColumn (name = "id_persona")
     private Persona persona;
 
-    public Proyecto() {
+    public SoftSkill() {
     }
 
-    public Proyecto(Integer id_proyecto, String nombreProyecto, String descripcionProyecto, Integer id_persona) {
-        this.id_proyecto = id_proyecto;
-        this.nombreProyecto = nombreProyecto;
-        this.descripcionProyecto = descripcionProyecto;
+    public SoftSkill(Integer id_softSkill, String skill, String urlImagen, Persona persona) {
+        this.id_softSkill = id_softSkill;
+        this.skill = skill;
+        this.urlImagen = urlImagen;
+        this.persona = persona;
     }
-   
+    
+    
 }

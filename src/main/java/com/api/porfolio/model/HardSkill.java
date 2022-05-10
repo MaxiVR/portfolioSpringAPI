@@ -1,5 +1,6 @@
 package com.api.porfolio.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,6 +20,7 @@ public class HardSkill {
     private String lenguaje;
     private Integer porcentaje;
     private String urlImagen;
+    @JsonBackReference
     @ManyToOne
     @JoinColumn (name = "id_persona")
     private Persona persona;
