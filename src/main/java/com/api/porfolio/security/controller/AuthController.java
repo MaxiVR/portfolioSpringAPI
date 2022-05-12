@@ -9,6 +9,7 @@ import com.api.porfolio.security.entity.Usuario;
 import com.api.porfolio.security.jwt.JwtProvider;
 import com.api.porfolio.security.service.UsuarioService;
 import com.api.porfolio.service.IPersonaService;
+import com.api.porfolio.service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -51,12 +52,12 @@ public class AuthController {
         Usuario usuario = new Usuario(nuevoUsuario.getEmail(), passwordEncoder.encode(nuevoUsuario.getPassword()));
         Persona per = new Persona ();
         usuarioService.save(usuario);
-        usuarioService.setIdPerRelacion(usuario.getId());
-        per.setId_persona(usuario.getId());
         System.out.println(usuario.getId());
-        System.out.println(per.getId_persona());
         persoServ.crearPersona(per);
         System.out.println(per.getId_persona());
+        per.setId_persona(usuario.getId());
+        System.out.println(per.getId_persona());
+        usuarioService.setIdPerRelacion(usuario.getId());
         return new ResponseEntity(new Mensaje("usuario guardado"), HttpStatus.CREATED);
     }
 

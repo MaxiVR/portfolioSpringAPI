@@ -44,6 +44,7 @@ public class Persona {
     @JsonManagedReference
     @OneToMany (mappedBy = "persona")
     private List<SoftSkill> softskill;
+    @JsonManagedReference
     @OneToOne (mappedBy = "persona")
     private Usuario usuario;
     

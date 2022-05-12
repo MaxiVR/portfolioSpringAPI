@@ -1,6 +1,7 @@
 package com.api.porfolio.security.entity;
 
 import com.api.porfolio.model.Persona;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import lombok.Getter;
@@ -16,6 +17,7 @@ public class Usuario{
     private String email;
     @NotNull
     private String password;
+    @JsonBackReference
     @OneToOne
     @JoinColumn(name = "id_persona")
     private Persona persona;
