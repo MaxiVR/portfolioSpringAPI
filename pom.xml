@@ -13,11 +13,11 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>porfolio</name>
     <description>Porfolio ArgProg</description>
-    <properties>
+    <!--<properties>
         <java.version>18</java.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
+    </properties>-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
