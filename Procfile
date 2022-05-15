@@ -1,2 +1,1 @@
-String host = "0.0.0.0";
-int port = System.getenv("PORT");
+web: java $JAVA_OPTS -Dserver.port=$PORT -cp target/classes/:target/dependency
