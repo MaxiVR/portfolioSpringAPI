@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar -Dspring.profiles.active=production target/*.jar --port $PORT
+web: java -jar -Dserver.port=$PORT target/*.jar>
