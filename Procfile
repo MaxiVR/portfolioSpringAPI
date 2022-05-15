@@ -1,1 +1,1 @@
-worker: java $JAVA_OPTS -jar target/myTargetJar-SNAPSHOT.jar
+worker: java $JAVA_OPTS -jar target/*.jar
