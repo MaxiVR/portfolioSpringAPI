@@ -9,7 +9,6 @@ import com.api.porfolio.security.entity.Usuario;
 import com.api.porfolio.security.jwt.JwtProvider;
 import com.api.porfolio.security.service.UsuarioService;
 import com.api.porfolio.service.IPersonaService;
-import com.api.porfolio.service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
