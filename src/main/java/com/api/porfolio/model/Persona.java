@@ -31,22 +31,22 @@ public class Persona {
     private String sobre_mi;
     private String url_foto;
     @JsonManagedReference
-    @OneToMany (mappedBy = "persona", fetch = FetchType.LAZY)
+    @OneToMany (mappedBy = "persona", fetch=FetchType.EAGER)
     private List<Educacion> educacion;
     @JsonManagedReference
-    @OneToMany (mappedBy = "persona", fetch = FetchType.LAZY)
+    @OneToMany (mappedBy = "persona", fetch=FetchType.EAGER)
     private List<Trabajo> trabajo;
     @JsonManagedReference
-    @OneToMany (mappedBy = "persona", fetch = FetchType.LAZY)
+    @OneToMany (mappedBy = "persona", fetch=FetchType.EAGER)
     private List<Proyecto> proyecto;
     @JsonManagedReference
-    @OneToMany (mappedBy = "persona", fetch = FetchType.LAZY)
+    @OneToMany (mappedBy = "persona", fetch=FetchType.EAGER)
     private List<HardSkill> hardskill;
     @JsonManagedReference
-    @OneToMany (mappedBy = "persona", fetch = FetchType.LAZY)
+    @OneToMany (mappedBy = "persona", fetch=FetchType.EAGER)
     private List<SoftSkill> softskill;
     @JsonManagedReference
-    @OneToOne (mappedBy = "persona", fetch = FetchType.LAZY)
+    @OneToOne (mappedBy = "persona")
     private Usuario usuario;
     
     
