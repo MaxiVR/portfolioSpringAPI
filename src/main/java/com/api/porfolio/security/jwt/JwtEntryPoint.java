@@ -10,10 +10,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Component
-@CrossOrigin(origins = "*")
 public class JwtEntryPoint implements AuthenticationEntryPoint {
 
     private final static Logger logger = LoggerFactory.getLogger(JwtEntryPoint.class);
