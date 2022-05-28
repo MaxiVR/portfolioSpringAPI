@@ -20,10 +20,10 @@ public class HardSkill {
     private String lenguaje;
     private Integer porcentaje;
     private String urlImagen;
-    @JsonBackReference
+    /*@JsonBackReference
     @ManyToOne
     @JoinColumn (name = "id_persona")
-    private Persona persona;
+    private Persona persona;*/
 
     public HardSkill() {
     }
