@@ -4,7 +4,6 @@ import com.api.porfolio.security.entity.Usuario;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.util.List;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,19 +30,19 @@ public class Persona {
     private String sobre_mi;
     private String url_foto;
     @JsonManagedReference
-    @OneToMany (mappedBy = "persona", fetch=FetchType.EAGER)
+    @OneToMany (mappedBy = "persona")
     private List<Educacion> educacion;
     @JsonManagedReference
-    @OneToMany (mappedBy = "persona", fetch=FetchType.EAGER)
+    @OneToMany (mappedBy = "persona")
     private List<Trabajo> trabajo;
     @JsonManagedReference
-    @OneToMany (mappedBy = "persona", fetch=FetchType.EAGER)
+    @OneToMany (mappedBy = "persona")
     private List<Proyecto> proyecto;
     @JsonManagedReference
-    @OneToMany (mappedBy = "persona", fetch=FetchType.EAGER)
+    @OneToMany (mappedBy = "persona")
     private List<HardSkill> hardskill;
     @JsonManagedReference
-    @OneToMany (mappedBy = "persona", fetch=FetchType.EAGER)
+    @OneToMany (mappedBy = "persona")
     private List<SoftSkill> softskill;
     @JsonManagedReference
     @OneToOne (mappedBy = "persona")
