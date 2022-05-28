@@ -29,7 +29,7 @@ public class Persona {
     private String email;
     private String sobre_mi;
     private String url_foto;
-    @JsonManagedReference
+    /*@JsonManagedReference
     @OneToMany (mappedBy = "persona")
     private List<Educacion> educacion;
     @JsonManagedReference
@@ -47,7 +47,7 @@ public class Persona {
     @JsonManagedReference
     @OneToOne (mappedBy = "persona")
     private Usuario usuario;
-    
+    */
     
     public Persona() {
         
