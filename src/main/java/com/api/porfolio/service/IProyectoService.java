@@ -11,7 +11,7 @@ public interface IProyectoService {
     public void borrarProyecto (Integer id);
     public Proyecto buscarProyecto (Integer id);
     public Proyecto modificarProyecto (Proyecto proAux, Proyecto proMod);
-    /*public void setIdPerRelacion(Integer id);*/
+    public void setIdPerRelacion(Integer id);
 
     
 }

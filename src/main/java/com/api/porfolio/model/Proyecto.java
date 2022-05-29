@@ -19,7 +19,7 @@ public class Proyecto {
     private Integer id_proyecto;
     private String nombreProyecto;
     private String descripcionProyecto;
-    /*@JsonBackReference*/
+    @JsonBackReference
     @ManyToOne
     @JoinColumn (name = "id_persona")
     private Persona persona;

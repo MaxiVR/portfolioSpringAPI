@@ -12,11 +12,12 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST, RequestMethod.PATCH, RequestMethod.PUT, RequestMethod.DELETE})
 public class TrabajoController {
 
     @Autowired
@@ -24,7 +25,9 @@ public class TrabajoController {
 
     @PostMapping ("/persona/trabajo/new")
     public Trabajo crearTrabajo (@RequestBody Trabajo trabajo){
-       return trabajoService.crearTrabajo(trabajo);   
+       Trabajo trabajoAux = trabajoService.crearTrabajo(trabajo);
+       trabajoService.setIdPerRelacion(trabajoAux.getId_trabajo());
+       return  trabajoAux;
     }
 
     @GetMapping ("/persona/trabajo/ver/todo")

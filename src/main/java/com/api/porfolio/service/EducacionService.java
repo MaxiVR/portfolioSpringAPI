@@ -12,10 +12,10 @@ public class EducacionService implements IEducacionService{
     @Autowired
     private EducacionRepository eduRepo;
     
-    /*
+    
     public void setIdPerRelacion (Integer id){
         eduRepo.setIdPerRelacion(id);
-    }*/
+    }
             
     @Override
     public List <Educacion> verListaEducacion (){

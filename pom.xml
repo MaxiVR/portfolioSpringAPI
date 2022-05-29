@@ -68,12 +68,15 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
-        </dependency>    
+        </dependency>
+                
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
         </dependency>
     </dependencies>
+  
+
     <build>
         <plugins>
             <plugin>
@@ -87,7 +90,11 @@
                         </exclude>
                     </excludes>
                 </configuration>
-            </plugin>      
+            </plugin>
+
+       
+
         </plugins>
     </build>
+
 </project>

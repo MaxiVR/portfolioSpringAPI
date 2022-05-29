@@ -17,10 +17,8 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
     @Query(value = "FROM Usuario WHERE email = :email")
     public Usuario  findUsuario (String email);
     
-    /*
     @Transactional
     @Modifying
     @Query(value = "UPDATE Usuario SET id_persona = 1 WHERE id = :id")
     public void setIdPerRelacion (Integer id);
-    */  
 }

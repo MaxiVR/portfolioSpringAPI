@@ -10,5 +10,5 @@ public interface ITrabajoService {
     public void borrarTrabajo (Integer  id);
     public Trabajo buscarTrabajo (Integer  id);
     public Trabajo modificarTrabajo (Trabajo trabajoAux, Trabajo trabajoMod);
-    /*public void setIdPerRelacion(Integer id);*/
+    public void setIdPerRelacion(Integer id);
 }

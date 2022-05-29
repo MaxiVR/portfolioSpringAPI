@@ -15,10 +15,9 @@ public class UsuarioService {
     @Autowired
     UsuarioRepository usuarioRepository;
     
-    /*
     public void setIdPerRelacion (Integer id){
         usuarioRepository.setIdPerRelacion(id);
-    }*/
+    }
 
     public Optional<Usuario> getByEmail(String email){
         return usuarioRepository.findByEmail(email);

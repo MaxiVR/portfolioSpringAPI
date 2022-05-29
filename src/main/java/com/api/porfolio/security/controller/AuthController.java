@@ -23,8 +23,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/persona/auth")
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST, RequestMethod.PATCH, RequestMethod.PUT, RequestMethod.DELETE})
 public class AuthController {
 
     @Autowired
@@ -56,7 +56,7 @@ public class AuthController {
         System.out.println(per.getId_persona());
         per.setId_persona(usuario.getId());
         System.out.println(per.getId_persona());
-        /*usuarioService.setIdPerRelacion(usuario.getId());*/
+        usuarioService.setIdPerRelacion(usuario.getId());
         return new ResponseEntity(new Mensaje("usuario guardado"), HttpStatus.CREATED);
     }
 

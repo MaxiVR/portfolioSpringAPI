@@ -9,10 +9,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface HardSkillRepository extends JpaRepository<HardSkill, Integer>{
-    /*
+    
     @Transactional
     @Modifying
     @Query(value = "UPDATE HardSkill SET id_persona = 1 WHERE id_hardSkill = :id_hardSkill")
     public void setIdPerRelacion (Integer id_hardSkill);
-    */
+    
 }

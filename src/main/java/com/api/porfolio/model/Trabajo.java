@@ -22,7 +22,7 @@ public class Trabajo {
     private String descripcionTrabajo;
     private String fechaInicio;
     private String fechaFin;
-    /*@JsonBackReference*/
+    @JsonBackReference
     @ManyToOne
     @JoinColumn (name = "id_persona")
     private Persona persona;

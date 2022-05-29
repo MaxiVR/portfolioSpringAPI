@@ -12,10 +12,9 @@ public class TrabajoService implements ITrabajoService{
     @Autowired
     private TrabajoRepository trabajoRepo;
     
-    /*
     public void setIdPerRelacion (Integer id){
         trabajoRepo.setIdPerRelacion(id);
-    }*/
+    }
 
     @Override
     public List<Trabajo> verListaTrabajo(){

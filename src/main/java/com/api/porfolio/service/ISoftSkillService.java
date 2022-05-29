@@ -11,5 +11,5 @@ public interface ISoftSkillService {
     public void borrarSkill (Integer id);
     public SoftSkill buscarSkill (Integer id);
     public SoftSkill modificarSkill (SoftSkill skillAux, SoftSkill skillMod);
-    /*public void setIdPerRelacion(Integer id);*/
+    public void setIdPerRelacion(Integer id);
 }
