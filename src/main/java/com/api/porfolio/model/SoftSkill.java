@@ -19,10 +19,10 @@ public class SoftSkill {
     private Integer id_softSkill;
     private String skill;
     private String urlImagen;
-    @JsonBackReference
+    /*@JsonBackReference
     @ManyToOne
     @JoinColumn (name = "id_persona")
-    private Persona persona;
+    private Persona persona;*/
 
     public SoftSkill() {
     }
@@ -31,7 +31,6 @@ public class SoftSkill {
         this.id_softSkill = id_softSkill;
         this.skill = skill;
         this.urlImagen = urlImagen;
-        this.persona = persona;
     }
     
     
