@@ -56,7 +56,7 @@ public class AuthController {
         System.out.println(per.getId_persona());
         per.setId_persona(usuario.getId());
         System.out.println(per.getId_persona());
-        usuarioService.setIdPerRelacion(usuario.getId());
+        /*usuarioService.setIdPerRelacion(usuario.getId());*/
         return new ResponseEntity(new Mensaje("usuario guardado"), HttpStatus.CREATED);
     }
 

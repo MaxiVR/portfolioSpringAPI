@@ -4,6 +4,7 @@ import com.api.porfolio.model.Educacion;
 import com.api.porfolio.service.IEducacionService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +22,7 @@ public class EducacionController {
     @Autowired
     private IEducacionService eduService;
     
-    @PostMapping ("/persona/educacion/new")
+    @PostMapping (value = "/persona/educacion/new", consumes = MediaType.APPLICATION_JSON_VALUE)
     public Educacion crearEducacion (@RequestBody Educacion edu){
         return eduService.crearEducacion(edu);         
     }
