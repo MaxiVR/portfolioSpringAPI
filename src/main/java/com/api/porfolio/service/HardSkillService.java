@@ -12,9 +12,10 @@ public class HardSkillService implements IHardSkillService{
     @Autowired
     private HardSkillRepository hardSkillRepo;
     
+    /*
     public void setIdPerRelacion (Integer id){
         hardSkillRepo.setIdPerRelacion(id);
-    }
+    }*/
     
     @Override
     public List <HardSkill> verListaHardSkill(){

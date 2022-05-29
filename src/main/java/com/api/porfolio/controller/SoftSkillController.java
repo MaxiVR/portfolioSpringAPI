@@ -28,9 +28,7 @@ public class SoftSkillController {
     
     @PostMapping ("/persona/softskill/new")
     public SoftSkill crearSoftSkill (@RequestBody SoftSkill skill){
-        SoftSkill skillAux = softSkillService.crearSkill(skill);
-        softSkillService.setIdPerRelacion(skillAux.getId_softSkill());
-        return skillAux;
+        return softSkillService.crearSkill(skill);
     }
 
     @DeleteMapping ("/persona/softskill/delete/{id}")

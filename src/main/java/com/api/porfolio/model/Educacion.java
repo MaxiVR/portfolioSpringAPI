@@ -20,10 +20,10 @@ public class Educacion {
     private String nombreInstitucion;
     private String fechaInicio;
     private String fechaFin;
-    /*@JsonBackReference
+    /*@JsonBackReference*/
     @ManyToOne
     @JoinColumn (name = "id_persona")
-    private Persona persona;*/
+    private Persona persona;
 
     public Educacion() {
     }

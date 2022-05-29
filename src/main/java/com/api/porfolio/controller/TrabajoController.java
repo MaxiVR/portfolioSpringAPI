@@ -24,9 +24,7 @@ public class TrabajoController {
 
     @PostMapping ("/persona/trabajo/new")
     public Trabajo crearTrabajo (@RequestBody Trabajo trabajo){
-       Trabajo trabajoAux = trabajoService.crearTrabajo(trabajo);
-       trabajoService.setIdPerRelacion(trabajoAux.getId_trabajo());
-       return  trabajoAux;
+       return trabajoService.crearTrabajo(trabajo);   
     }
 
     @GetMapping ("/persona/trabajo/ver/todo")

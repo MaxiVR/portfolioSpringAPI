@@ -28,9 +28,7 @@ public class HardSkillController {
     
     @PostMapping ("/persona/hardskill/new")
     public HardSkill crearSkill (@RequestBody HardSkill skill){
-        HardSkill skillAux = hardSkillService.crearSkill(skill);
-        hardSkillService.setIdPerRelacion(skillAux.getId_hardSkill());
-        return skillAux;
+        return  hardSkillService.crearSkill(skill);
     }
 
     @DeleteMapping ("/persona/hardskill/delete/{id}")

@@ -12,10 +12,10 @@ public class ProyectoService implements IProyectoService{
     @Autowired
     private ProyectoRepository proyectoRepo;
     
-    
+    /*
     public void setIdPerRelacion (Integer id){
         proyectoRepo.setIdPerRelacion(id);
-    }
+    }*/
     
     @Override
     public List <Proyecto> verListaProyecto (){

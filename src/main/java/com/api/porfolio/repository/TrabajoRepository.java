@@ -9,9 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface TrabajoRepository extends JpaRepository<Trabajo, Integer>{
-    
+    /*
     @Transactional
     @Modifying
     @Query(value = "UPDATE Trabajo SET id_persona = 1 WHERE id_trabajo = :id_trabajo")
-    public void setIdPerRelacion (Integer id_trabajo);
+    public void setIdPerRelacion (Integer id_trabajo);*/
 }

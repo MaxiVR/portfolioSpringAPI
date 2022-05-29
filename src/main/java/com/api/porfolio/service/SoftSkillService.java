@@ -12,9 +12,10 @@ public class SoftSkillService implements  ISoftSkillService{
     @Autowired
     private SoftSkillRepository softSkillRepo;
     
+    /*
     public void setIdPerRelacion (Integer id){
         softSkillRepo.setIdPerRelacion(id);
-    }
+    }*/
 
     @Override
     public List <SoftSkill> verListaSoftSkill() {

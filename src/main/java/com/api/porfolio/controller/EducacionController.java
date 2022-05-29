@@ -23,9 +23,7 @@ public class EducacionController {
     
     @PostMapping ("/persona/educacion/new")
     public Educacion crearEducacion (@RequestBody Educacion edu){
-        Educacion eduAux = eduService.crearEducacion(edu);
-        eduService.setIdPerRelacion(eduAux.getId_edu());
-        return eduAux;
+        return eduService.crearEducacion(edu);         
     }
 
     @GetMapping ("/persona/educacion/ver/todo")
