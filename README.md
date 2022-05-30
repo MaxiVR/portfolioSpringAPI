@@ -1,0 +1,2 @@
+# portfolioSpringAPI
+Quería dejar asentado que tuve varios problemas que a mi entender provienen de Clever Cloud. Por eso mismo en varias ocasiones las información no carga en el front (aun haciendo varias modificaciones que originalmente no estaban en mi proyecto), cuando anteriormente utilizando una db local funcionaba de manera correcta. En ocasiones ni siquiera podía conectarme al PHPMyAdmin incluido en el dashboard de Clever donde salía el siguiente mensaje "Connection to the MySQL server failed"
